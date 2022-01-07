@@ -1,0 +1,150 @@
+﻿<Window x:Class="ClientApp.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp.Views" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="ScreenSaver" Height="450" Width="430"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+
+
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+
+            </Grid.RowDefinitions>
+
+            <Button VerticalAlignment="Bottom" HorizontalAlignment="Right"></Button>
+            <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,0,-57,-26">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0" />
+                        <GradientStop Color="#f083da" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button x:Name="exitButton"  VerticalAlignment="Top" Height="20" Content="X" Margin="373,10,68,0" Click="exitButtonClicked" />
+
+
+
+
+            </Border>
+            <TextBlock Text="Create Your Account!" 
+                           FontWeight="Bold" 
+                           FontFamily="helvetica"
+                           FontSize="22"
+                           Foreground="White" HorizontalAlignment="Left" Margin="106,0,0,0" Height="42" VerticalAlignment="Center"/>
+
+
+
+            <StackPanel Margin="25,110,-25,2" Grid.RowSpan="2">
+                <StackPanel  Orientation="Horizontal">
+                    <TextBlock Text="Username: "
+                          FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="White"
+                        
+                         Width="166"
+                         
+                         Opacity="0.5"
+                         Height="25"/>
+                    <TextBox x:Name="usernameTextBox" FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="200"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="6,0,0,0" />
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,30,0,0">
+                    <TextBlock Text="Email: "
+                          FontFamily="Helvetica"
+                         FontWeight="Normal"
+                         FontSize="20"
+                         Foreground="White"
+                        
+                         Width="164"
+                         
+                         Opacity="0.5"
+                         Height="25"/>
+                    <TextBox x:Name="emailTextBox" FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="200"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="6,0,0,0" 
+                         />
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,30,0,0">
+                    <TextBlock Text="Enter Password: "
+                          FontFamily="Helvetica"
+                         FontWeight="Normal"
+                         FontSize="20"
+                         Foreground="White"
+                        
+                         Width="164"
+                         
+                         Opacity="0.5"
+                         Height="25"/>
+                    <PasswordBox x:Name="passwordTextBox" FontFamily="Helvetica"
+                          FontWeight="Light"
+                         FontSize="20"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="200"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="6,0,0,0"
+                          />
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,30,0,0">
+                    <TextBlock Text="Confirm Password: "
+                          FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="White"
+                        
+                         Width="163"
+                         
+                         Opacity="0.5"
+                         Height="25"/>
+                    <PasswordBox x:Name="confPasswordTextBox" FontFamily="Helvetica"
+                          FontWeight="Light"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="200"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="6,0,0,0"
+                          />
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="95,18,100,50">
+                    <Button x:Name="registerButton" Width="96" Height="36" Content="Create" Margin="0,0,0,50" Click="registerButton_Click"  />
+                    <Button x:Name="alreadyButton" Width="150" Height="35" Content="I have already an account" Click="alreadyButton_Click" />
+                </StackPanel>
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>

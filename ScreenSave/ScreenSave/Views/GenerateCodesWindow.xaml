@@ -1,0 +1,27 @@
+﻿<Window x:Class="ClientApp.Views.GenerateCodesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp.Views"
+        mc:Ignorable="d"
+        Title="GenerateCodesWindow" Height="450" WindowStyle="None" Width="800" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0" />
+                    <GradientStop Color="#f083da" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ComboBox x:Name="yourGroupsComboBox" HorizontalAlignment="Left" Margin="307,149,0,0" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.328,0.366" Height="31" Background="Transparent" Opacity="0.5"/>
+        <Label Content="My groups:" FontFamily="Helvetica" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="177,149,0,0" VerticalAlignment="Top" Height="41" Width="125"/>
+        <TextBox x:Name="codeGeneratedTextBox" Background="Transparent" HorizontalAlignment="Left" FontFamily="Helvetica" FontSize="20" Foreground="White" Margin="163,324,0,0" Text="The code generated" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"   VerticalAlignment="Top" Width="558" AllowDrop="False"/>
+        <Button x:Name="generateCodeButton" Content="Generate Button" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" Height="40" Width="148" Background="Transparent" Click="generateCodeButton_Click"/>
+        <Label x:Name="expDateLabel" Foreground="White" FontSize="20" FontFamily="Helvetica" Content="Expiration date label" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="510" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Button x:Name="closeButton" Content="x" HorizontalAlignment="Left" Margin="754,2,0,0" VerticalAlignment="Top" Height="34" Width="46" Background="Transparent" Click="closeButton_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,99 @@
+﻿<Window x:Class="ClientApp.Views.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp.Views" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="ScreenSaver" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+
+            </Grid.RowDefinitions>
+
+            <Button VerticalAlignment="Bottom" HorizontalAlignment="Right"></Button>
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0" />
+                        <GradientStop Color="#f083da" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button x:Name="exitButton"  VerticalAlignment="Top" Height="36" Content="X" Margin="343,8,0,0" HorizontalAlignment="Left" Width="29" Click="exitButton_Click" />
+
+
+
+
+            </Border>
+            <TextBlock Text="Dashboard" 
+                           FontWeight="Bold" 
+                           FontFamily="helvetica"
+                           FontSize="28"
+                           Foreground="White" HorizontalAlignment="Center" Margin="0,33,0,0" Height="42" VerticalAlignment="Top"/>
+
+
+
+            <StackPanel Grid.Row="1">
+                <StackPanel  Orientation="Horizontal" Margin="80,0,0,0">
+                    <Button 
+                        x:Name="take_screenshotButton"
+                        FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="213"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="43"
+                         Margin="6,0,0,0"
+                            Content="Take screenshot" Click="take_screenshotButton_Click" />
+
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal" Margin="80,20,50,0">
+                    <Button x:Name="galleryButton" FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="208"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="45"
+                         Margin="6,0,0,0"
+                            Content="Gallery" Click="galleryButton_Click"/>
+
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="80,20,50,0">
+                    <Button x:Name="manageGroupsButton" FontFamily="Helvetica"
+                         FontWeight="Light"
+                         FontSize="20"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="209"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="43"
+                         Margin="6,0,0,0"
+                            Content="Manage Groups" Click="manageGroupsButton_Click"/>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Height="246" >
+                    <Button x:Name="logoutButton" Width="114" Height="40" Content="Log out" Click="logoutButton_Click"  />
+                </StackPanel>
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>

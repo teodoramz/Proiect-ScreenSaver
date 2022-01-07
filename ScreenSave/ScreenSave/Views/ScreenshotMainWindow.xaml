@@ -1,0 +1,65 @@
+﻿<Window x:Class="ClientApp.Views.ScreenshotMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp.Views" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="ScreenShotWindow" Height="700" Width="1280"
+       WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" MouseDown="Window_MouseDown"
+        Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <SolidColorBrush Color="White"/>
+    </Window.Background>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <StackPanel.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0" />
+                    <GradientStop Color="#f083da" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="backButton" Margin="10,0,0,0" Width="35" Height="35" Click="backButton_Click">
+                <iconPacks:PackIconMaterial Kind="ArrowBottomLeft"
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White" />
+            </Button>
+            <Button x:Name="fullscreenButton"  Height="55" Width="148" Margin="60,0,0,0" Content="SS Fullscreen" Click="fullscreenButton_Click"/>
+            <Button x:Name="selected_areaButton"  Height="54" Width="163" Margin="60,0,0,0" Content="SS Selected Area" Click="selected_areaButton_Click"/>
+            <ComboBox x:Name="savePlacesComboBox" Margin="390,0,0,0" Height="40" Width="180"  FontFamily="Helvetica"
+                         FontWeight="Light"
+                         Text="Username"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="Black"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5" VerticalContentAlignment="Center" 
+                         >
+            </ComboBox>
+            <Button x:Name="saveButton" Margin="10,0,0,0" Width="40" Height="40" Click="saveButton_Click">
+                <iconPacks:PackIconMaterial Kind="ContentSave" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White" />
+            </Button>
+            
+
+        </StackPanel>
+        <Border x:Name="selected_areaBorder"  Grid.Row="1" BorderThickness="3" BorderBrush="#7be9f6">
+            <Grid x:Name="selected_areaGrid">
+                <Image x:Name="imageBkg" HorizontalAlignment="Center" Height="616" Margin="0,0,0,0" VerticalAlignment="Center" Width="1280"/>
+            </Grid>
+        </Border>
+        <Button x:Name="exitButton"  VerticalAlignment="Top" HorizontalAlignment="Right" Height="39" Content="X"  Click="exitButtonClicked" Width="37" Margin="0,4,6,0" />
+        <Button x:Name="cpyClipboard" Height="39" Content="CPY"  Click="cpyClipboard_Click" Width="37" Margin="1112,19,131,20" />
+    </Grid>
+</Window>

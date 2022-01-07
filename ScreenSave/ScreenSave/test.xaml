@@ -1,0 +1,14 @@
+﻿<Window x:Class="ClientApp.test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp"
+        mc:Ignorable="d"
+        Title="test" Height="450" Width="800">
+    <Grid>
+        <Button Background="Purple" Content="Button" HorizontalAlignment="Left" Margin="197,106,0,0" VerticalAlignment="Top" Height="111" Width="79" Click="Button_Click_1"/>
+        <Button Background="Purple" Content="do smth" HorizontalAlignment="Left" Margin="414,285,0,0" VerticalAlignment="Top" Height="64" Width="123" Click="Button_Click"/>
+
+    </Grid>
+</Window>
